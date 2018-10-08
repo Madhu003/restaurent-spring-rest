@@ -3,11 +3,13 @@ package restaurent.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import restaurent.DAO.CategoryDAO;
 import restaurent.entity.Category;
 import restaurent.entity.MenuItem;
 
+@Service
 public class CategoryServiceImp implements CategoryService {
 
 	@Autowired

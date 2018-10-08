@@ -1,5 +1,6 @@
 package restaurent.controller;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,6 @@ public class MenuItemController {
 
 	@GetMapping
 	public Map getList() {
-		return null;
+		return (Map) new HashMap().put("madhu", "sudan");
 	}
 }
