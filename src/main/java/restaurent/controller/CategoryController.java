@@ -3,6 +3,7 @@ package restaurent.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import restaurent.entity.Category;
 import restaurent.service.CategoryService;
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping("/category")
 public class CategoryController {
@@ -39,8 +41,8 @@ public class CategoryController {
 
 	@PutMapping("/{category_id}")
 	public void updateCategory(@PathVariable("category_id") Integer categoryId) {
-		Category category = new Category(categoryId);
-		categoryService.updateCategory(category);
+		// Category category = new Category(categoryId);
+		// categoryService.updateCategory(category);
 	}
 
 	@DeleteMapping("/{category_id}")

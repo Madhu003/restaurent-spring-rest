@@ -34,11 +34,6 @@ public class MenuItem {
 	@Column(name = "special")
 	Boolean special;
 
-	public MenuItem(Integer menuItemId) {
-		super();
-		this.menuItemId = menuItemId;
-	}
-
 	public Integer getMenuItemId() {
 		return menuItemId;
 	}

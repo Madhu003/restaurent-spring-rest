@@ -16,16 +16,13 @@ public class Category {
 	@Column(name = "category_id")
 	Integer categoryId;
 
-	@Column(name = "title")
-	String title;
+	@Column(name = "name")
+	String name;
+	@Column(name = "short_name")
+	String shortName;
 
-	@Column(name = "img_url")
-	String imageUrl;
-
-	public Category(Integer categoryId) {
-		super();
-		this.categoryId = categoryId;
-	}
+	@Column(name = "special_instructions")
+	String specialInstruction;
 
 	public Integer getCategoryId() {
 		return categoryId;
@@ -35,20 +32,27 @@ public class Category {
 		this.categoryId = categoryId;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getName() {
+		return name;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getImageUrl() {
-		return imageUrl;
+	public String getShortName() {
+		return shortName;
 	}
 
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+	public void setShortName(String shortName) {
+		this.shortName = shortName;
 	}
 
+	public String getSpecialInstruction() {
+		return specialInstruction;
+	}
+
+	public void setSpecialInstruction(String specialInstruction) {
+		this.specialInstruction = specialInstruction;
+	}
 }
